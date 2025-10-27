@@ -123,7 +123,7 @@ app.delete('/api/persons/:id', (request, response, next) => {
     .catch(next)
 })
 
-const errorHandler = (error, request, response, next) => {
+const errorHandler = (error, request, response) => {
   console.error(error.message)
 
   if (error.name === 'CastError') {
